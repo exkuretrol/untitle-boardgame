@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 2ad37373e5f884acda4aaba0f9d68c89
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - Plain: {instanceID: 0}
+  - Forest: {instanceID: 0}
+  - Hill: {instanceID: 0}
+  - Water: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

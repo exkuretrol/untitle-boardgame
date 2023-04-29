@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ad37373e5f884acda4aaba0f9d68c89, type: 3}
+  m_Name: Hex Tile Generation Settings
+  m_EditorClassIdentifier: 
+  Plain: {fileID: 2594954818435362246, guid: 05109107ef1db48bda84a15f98db9634, type: 3}
+  Forest: {fileID: 3513348826341828361, guid: 2dd9997fb6765481fb0f3f99090e090b, type: 3}
+  Hill: {fileID: 4417478000095453513, guid: 8f4489efc4e25458fb584863d69e0580, type: 3}
+  Water: {fileID: 2441340806342757676, guid: c6c847cb9db704da882b7edcb521636c, type: 3}

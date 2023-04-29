@@ -34,19 +34,19 @@ public class DebugController : MonoBehaviour
 
     private void Awake()
     {
-        chess = GameObject.Find("ChessBase");
-        AnimationStateController animationStateController = chess.GetComponents<AnimationStateController>()[0];
+        // chess = GameObject.Find("ChessBase");
+        // AnimationStateController animationStateController = chess.GetComponents<AnimationStateController>()[0];
         
         Toggle_Moving = new DebugCommand("toggleMoving", "觸發棋子移動動畫", "toggleMoving", () =>
         {
             Debug.Log("toggled.");
-            animationStateController.ToggleMoving();
+            // animationStateController.ToggleMoving();
         });
 
         Toggle_Chosen = new DebugCommand("toggleChosen", "觸發棋子被選中動畫", "toggleChosen", () =>
         {
             Debug.Log("toggled.");
-            animationStateController.ToggleChosen();
+            // animationStateController.ToggleChosen();
         });
 
         Echo = new DebugCommand<string>("echo", "你說什麼我就說什麼＝＝", "echo <字串>", (str) =>
