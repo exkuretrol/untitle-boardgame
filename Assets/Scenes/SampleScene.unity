@@ -186,7 +186,6 @@ MonoBehaviour:
   settings: {fileID: 11400000, guid: 0d4508010d9e04ea8af334239c3a9f5a, type: 2}
   tileType: 0
   tile: {fileID: 1358528696}
-  fow: {fileID: 0}
   offsetCoordinate: {x: 2, y: 3}
   cubeCoordinate: {x: 0, y: 3, z: -3}
   neighbors: []
@@ -336,7 +335,6 @@ MonoBehaviour:
   settings: {fileID: 11400000, guid: 0d4508010d9e04ea8af334239c3a9f5a, type: 2}
   tileType: 0
   tile: {fileID: 1203538760}
-  fow: {fileID: 0}
   offsetCoordinate: {x: 3, y: 2}
   cubeCoordinate: {x: 2, y: 2, z: -4}
   neighbors: []
@@ -403,7 +401,6 @@ MonoBehaviour:
   settings: {fileID: 11400000, guid: 0d4508010d9e04ea8af334239c3a9f5a, type: 2}
   tileType: 0
   tile: {fileID: 1347970677}
-  fow: {fileID: 0}
   offsetCoordinate: {x: 1, y: 0}
   cubeCoordinate: {x: 1, y: 0, z: -1}
   neighbors: []
@@ -573,104 +570,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 226706843}
   m_Mesh: {fileID: 4300000, guid: cdbd8181665b548e082e85e60289ac82, type: 2}
---- !u!1 &263573422
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 263573426}
-  - component: {fileID: 263573425}
-  - component: {fileID: 263573424}
-  - component: {fileID: 263573423}
-  m_Layer: 0
-  m_Name: Table
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!64 &263573423
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 263573422}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &263573424
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 263573422}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &263573425
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 263573422}
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &263573426
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 263573422}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &314731672
 GameObject:
   m_ObjectHideFlags: 0
@@ -734,7 +633,6 @@ MonoBehaviour:
   settings: {fileID: 11400000, guid: 0d4508010d9e04ea8af334239c3a9f5a, type: 2}
   tileType: 0
   tile: {fileID: 935073244}
-  fow: {fileID: 0}
   offsetCoordinate: {x: 2, y: 0}
   cubeCoordinate: {x: 2, y: 0, z: -2}
   neighbors: []
@@ -967,7 +865,6 @@ MonoBehaviour:
   settings: {fileID: 11400000, guid: 0d4508010d9e04ea8af334239c3a9f5a, type: 2}
   tileType: 1
   tile: {fileID: 745262258}
-  fow: {fileID: 0}
   offsetCoordinate: {x: 4, y: 4}
   cubeCoordinate: {x: 2, y: 4, z: -6}
   neighbors: []
@@ -1034,7 +931,6 @@ MonoBehaviour:
   settings: {fileID: 11400000, guid: 0d4508010d9e04ea8af334239c3a9f5a, type: 2}
   tileType: 0
   tile: {fileID: 720359436}
-  fow: {fileID: 0}
   offsetCoordinate: {x: 2, y: 1}
   cubeCoordinate: {x: 1, y: 1, z: -2}
   neighbors: []
@@ -1275,7 +1171,7 @@ Transform:
   - {fileID: 1349424184}
   - {fileID: 401697903}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &515729780
 GameObject:
@@ -1287,6 +1183,7 @@ GameObject:
   m_Component:
   - component: {fileID: 515729782}
   - component: {fileID: 515729781}
+  - component: {fileID: 515729783}
   m_Layer: 0
   m_Name: MapGen
   m_TagString: Untagged
@@ -1308,22 +1205,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mapSize: {x: 5, y: 3}
   chunks:
-  - {fileID: 6685286924522115166, guid: cf7fc029c978d46868e04709cc2274a2, type: 3}
-  - {fileID: 1139782328640227025, guid: b9fa63352b58b469395f0bd08b580b52, type: 3}
-  - {fileID: 2696307296468489004, guid: 29b542a796f1a47a1b6db8d13fd78e38, type: 3}
-  - {fileID: 7547284824075991408, guid: fd33dc32311bb4dbea325047e11e4456, type: 3}
-  - {fileID: 30897128735608533, guid: cf02972e167e445349384eb7979a2b1a, type: 3}
-  - {fileID: 6565273307141101483, guid: 81ad0a72ac5cf47798daafeccb13a8d4, type: 3}
-  - {fileID: 993707199032320156, guid: 6e6d2cdf7416c4229aea8caeb164a4ba, type: 3}
-  - {fileID: 6777747556850097347, guid: add0f61675320432183731b63dc51807, type: 3}
-  - {fileID: 8802866213756428959, guid: cd7601b3bf7dd4f219bd63ba17ed77ff, type: 3}
-  - {fileID: 727392311481424525, guid: 741d2550376c94857a7c7f4524cf06a3, type: 3}
-  - {fileID: 2788073543727335188, guid: 16cd12ef076fd4c8da4c253242e41948, type: 3}
-  - {fileID: 7501786759558872166, guid: 280e338d07a9540dcb37eeeff15204c5, type: 3}
-  - {fileID: 267889533427879, guid: ce4ce4e32f299489780f8550bd57c269, type: 3}
-  - {fileID: 4619272942496472954, guid: f78825ff7e1ee4367b503985fef9e6a3, type: 3}
-  - {fileID: 3652433296457600896, guid: c39eb0d7c6c614f26a1d10089a79a0fe, type: 3}
-  chunkSize: 5
+  - {fileID: 5291250573973510723, guid: bf0696f32e9614d8f847988ddf6b8650, type: 3}
+  - {fileID: 3312700175819712224, guid: b823cc2001ff84ea3b8d6dee4f33ea94, type: 3}
+  - {fileID: 5801697005847551782, guid: 6f74cf1c11dfc4c2b9659d4a3ea52edf, type: 3}
+  - {fileID: 1205756566640291386, guid: f7862ea0576524771ab297337ebea52c, type: 3}
+  - {fileID: 5537807780834186879, guid: 4bcdadfca8e3049249a32a7876ddd5af, type: 3}
+  - {fileID: 2329896529531340240, guid: 379d676ab0dec44bc9515e87269a5425, type: 3}
+  - {fileID: 1189007167151034730, guid: 5cdd417bd698b4def852a1f31722bdab, type: 3}
+  - {fileID: 6478796153692069510, guid: a6c165ec64444460d8eb26df91748ac6, type: 3}
+  - {fileID: 1456307718783075177, guid: 8c6ec3f72bb2d4a2484c863a43905145, type: 3}
+  - {fileID: 5821932291595921950, guid: c5b8acf2bc2ca4cd2a31690db62f24dc, type: 3}
+  - {fileID: 651734469243848998, guid: 39dd50d7ca3944f0cae1b771a01d3727, type: 3}
+  - {fileID: 1037222471803929279, guid: 75a893461476e4d1b966ac544aa83a5e, type: 3}
+  - {fileID: 5982715260137824571, guid: 46b220dce9ef84caf9f14b0ccbf757a9, type: 3}
+  - {fileID: 7478649024563429691, guid: d2daa641338ba41e69a17e12556c6bab, type: 3}
+  - {fileID: 7434290599493399276, guid: 4157610b96532493f9e03c5f45dc6315, type: 3}
+  chunkSize: 6
 --- !u!4 &515729782
 Transform:
   m_ObjectHideFlags: 0
@@ -1337,8 +1234,20 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &515729783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 515729780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47b2e7fb8c74b48ecbe4e7c3015882d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &520969165
 GameObject:
   m_ObjectHideFlags: 0
@@ -1402,7 +1311,6 @@ MonoBehaviour:
   settings: {fileID: 11400000, guid: 0d4508010d9e04ea8af334239c3a9f5a, type: 2}
   tileType: 0
   tile: {fileID: 1891495524}
-  fow: {fileID: 0}
   offsetCoordinate: {x: 1, y: 2}
   cubeCoordinate: {x: 0, y: 2, z: -2}
   neighbors: []
@@ -1552,7 +1460,6 @@ MonoBehaviour:
   settings: {fileID: 11400000, guid: 0d4508010d9e04ea8af334239c3a9f5a, type: 2}
   tileType: 0
   tile: {fileID: 226706843}
-  fow: {fileID: 0}
   offsetCoordinate: {x: 4, y: 3}
   cubeCoordinate: {x: 2, y: 3, z: -5}
   neighbors: []
@@ -1619,7 +1526,6 @@ MonoBehaviour:
   settings: {fileID: 11400000, guid: 0d4508010d9e04ea8af334239c3a9f5a, type: 2}
   tileType: 0
   tile: {fileID: 1007175095}
-  fow: {fileID: 0}
   offsetCoordinate: {x: 0, y: 2}
   cubeCoordinate: {x: -1, y: 2, z: -1}
   neighbors: []
@@ -1946,7 +1852,6 @@ MonoBehaviour:
   settings: {fileID: 11400000, guid: 0d4508010d9e04ea8af334239c3a9f5a, type: 2}
   tileType: 0
   tile: {fileID: 1584709956}
-  fow: {fileID: 0}
   offsetCoordinate: {x: 4, y: 2}
   cubeCoordinate: {x: 3, y: 2, z: -5}
   neighbors: []
@@ -2013,7 +1918,6 @@ MonoBehaviour:
   settings: {fileID: 11400000, guid: 0d4508010d9e04ea8af334239c3a9f5a, type: 2}
   tileType: 0
   tile: {fileID: 993783802}
-  fow: {fileID: 0}
   offsetCoordinate: {x: 0, y: 1}
   cubeCoordinate: {x: -1, y: 1, z: 0}
   neighbors: []
@@ -2080,7 +1984,6 @@ MonoBehaviour:
   settings: {fileID: 11400000, guid: 0d4508010d9e04ea8af334239c3a9f5a, type: 2}
   tileType: 0
   tile: {fileID: 1243072907}
-  fow: {fileID: 0}
   offsetCoordinate: {x: 0, y: 3}
   cubeCoordinate: {x: -2, y: 3, z: -1}
   neighbors: []
@@ -2147,7 +2050,6 @@ MonoBehaviour:
   settings: {fileID: 11400000, guid: 0d4508010d9e04ea8af334239c3a9f5a, type: 2}
   tileType: 1
   tile: {fileID: 318255491}
-  fow: {fileID: 0}
   offsetCoordinate: {x: 1, y: 4}
   cubeCoordinate: {x: -1, y: 4, z: -3}
   neighbors: []
@@ -2417,7 +2319,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!81 &963194226
 AudioListener:
   m_ObjectHideFlags: 0
@@ -2796,7 +2698,6 @@ MonoBehaviour:
   settings: {fileID: 11400000, guid: 0d4508010d9e04ea8af334239c3a9f5a, type: 2}
   tileType: 0
   tile: {fileID: 580050132}
-  fow: {fileID: 0}
   offsetCoordinate: {x: 2, y: 4}
   cubeCoordinate: {x: 0, y: 4, z: -4}
   neighbors: []
@@ -2863,7 +2764,6 @@ MonoBehaviour:
   settings: {fileID: 11400000, guid: 0d4508010d9e04ea8af334239c3a9f5a, type: 2}
   tileType: 0
   tile: {fileID: 922282536}
-  fow: {fileID: 0}
   offsetCoordinate: {x: 4, y: 1}
   cubeCoordinate: {x: 3, y: 1, z: -4}
   neighbors: []
@@ -3013,7 +2913,6 @@ MonoBehaviour:
   settings: {fileID: 11400000, guid: 0d4508010d9e04ea8af334239c3a9f5a, type: 2}
   tileType: 0
   tile: {fileID: 956611880}
-  fow: {fileID: 0}
   offsetCoordinate: {x: 3, y: 3}
   cubeCoordinate: {x: 1, y: 3, z: -4}
   neighbors: []
@@ -3246,7 +3145,6 @@ MonoBehaviour:
   settings: {fileID: 11400000, guid: 0d4508010d9e04ea8af334239c3a9f5a, type: 2}
   tileType: 1
   tile: {fileID: 1846040604}
-  fow: {fileID: 0}
   offsetCoordinate: {x: 3, y: 4}
   cubeCoordinate: {x: 1, y: 4, z: -5}
   neighbors: []
@@ -3396,7 +3294,6 @@ MonoBehaviour:
   settings: {fileID: 11400000, guid: 0d4508010d9e04ea8af334239c3a9f5a, type: 2}
   tileType: 1
   tile: {fileID: 1398930015}
-  fow: {fileID: 0}
   offsetCoordinate: {x: 0, y: 0}
   cubeCoordinate: {x: 0, y: 0, z: 0}
   neighbors: []
@@ -3546,7 +3443,6 @@ MonoBehaviour:
   settings: {fileID: 11400000, guid: 0d4508010d9e04ea8af334239c3a9f5a, type: 2}
   tileType: 0
   tile: {fileID: 2063285152}
-  fow: {fileID: 0}
   offsetCoordinate: {x: 2, y: 2}
   cubeCoordinate: {x: 1, y: 2, z: -3}
   neighbors: []
@@ -3613,7 +3509,6 @@ MonoBehaviour:
   settings: {fileID: 11400000, guid: 0d4508010d9e04ea8af334239c3a9f5a, type: 2}
   tileType: 0
   tile: {fileID: 481224180}
-  fow: {fileID: 0}
   offsetCoordinate: {x: 1, y: 3}
   cubeCoordinate: {x: -1, y: 3, z: -2}
   neighbors: []
@@ -3680,7 +3575,6 @@ MonoBehaviour:
   settings: {fileID: 11400000, guid: 0d4508010d9e04ea8af334239c3a9f5a, type: 2}
   tileType: 0
   tile: {fileID: 1023794216}
-  fow: {fileID: 0}
   offsetCoordinate: {x: 3, y: 1}
   cubeCoordinate: {x: 2, y: 1, z: -3}
   neighbors: []
@@ -3747,7 +3641,6 @@ MonoBehaviour:
   settings: {fileID: 11400000, guid: 0d4508010d9e04ea8af334239c3a9f5a, type: 2}
   tileType: 1
   tile: {fileID: 39046845}
-  fow: {fileID: 0}
   offsetCoordinate: {x: 0, y: 4}
   cubeCoordinate: {x: -2, y: 4, z: -2}
   neighbors: []
@@ -3897,7 +3790,6 @@ MonoBehaviour:
   settings: {fileID: 11400000, guid: 0d4508010d9e04ea8af334239c3a9f5a, type: 2}
   tileType: 0
   tile: {fileID: 429615221}
-  fow: {fileID: 0}
   offsetCoordinate: {x: 3, y: 0}
   cubeCoordinate: {x: 3, y: 0, z: -3}
   neighbors: []
@@ -4047,7 +3939,6 @@ MonoBehaviour:
   settings: {fileID: 11400000, guid: 0d4508010d9e04ea8af334239c3a9f5a, type: 2}
   tileType: 0
   tile: {fileID: 169165972}
-  fow: {fileID: 0}
   offsetCoordinate: {x: 1, y: 1}
   cubeCoordinate: {x: 0, y: 1, z: -1}
   neighbors: []
@@ -4195,7 +4086,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2000876335
 MonoBehaviour:
@@ -4355,7 +4246,6 @@ MonoBehaviour:
   settings: {fileID: 11400000, guid: 0d4508010d9e04ea8af334239c3a9f5a, type: 2}
   tileType: 1
   tile: {fileID: 330890955}
-  fow: {fileID: 0}
   offsetCoordinate: {x: 4, y: 0}
   cubeCoordinate: {x: 4, y: 0, z: -4}
   neighbors: []

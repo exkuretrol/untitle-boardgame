@@ -3,9 +3,9 @@ public class Utilities
 {
     public static Vector3Int OffsetToCube(Vector2Int offset)
     {
-        var q = offset.x - (offset.y + (offset.y % 2)) / 2;
-        var r = offset.y;
-        return new Vector3Int(q, r, -q - r);
+        var q = offset.x;
+        var r = offset.y - (offset.x - (offset.x % 2)) / 2;
+        return new Vector3Int(q, r, - q - r);
     }
     
     public static Vector3 GetPositionForHexFromCoordinate(int column, int row, bool isFlatTopped = true, float radius = 1f)
@@ -18,7 +18,7 @@ public class Utilities
         float horizontalDistance;
         float verticalDistance;
         float offset;
-        float size = radius;
+        var size = radius;
 
         if (!isFlatTopped)
         {
@@ -48,6 +48,6 @@ public class Utilities
             yPosition = (row * verticalDistance) - offset;
         }
 
-        return new Vector3(xPosition, 0, -yPosition);
+        return new Vector3(xPosition, 0, - yPosition);
     }
 }

@@ -13,15 +13,13 @@ public class HexTile : MonoBehaviour
 
     public GameObject tile;
 
-    public GameObject fow;
-
     public Vector2Int offsetCoordinate;
 
     public Vector3Int cubeCoordinate;
 
     public List<HexTile> neighbors;
 
-    private bool isDirty = false;
+    private bool _isDirty = false;
 
     public void RollTileType()
     {
@@ -33,8 +31,8 @@ public class HexTile : MonoBehaviour
         tile = Instantiate(settings.getTile(tileType), transform);
         if (gameObject.GetComponent<MeshCollider>() == null)
         {
-            MeshCollider collider = gameObject.AddComponent<MeshCollider>();
-            collider.sharedMesh = GetComponentInChildren<MeshFilter>().sharedMesh;
+            MeshCollider meshCollider = gameObject.AddComponent<MeshCollider>();
+            meshCollider.sharedMesh = GetComponentInChildren<MeshFilter>().sharedMesh;
         }
 
         transform.SetParent(tile.transform);
@@ -47,24 +45,35 @@ public class HexTile : MonoBehaviour
             return;
         }
         
-        isDirty = true;
+        _isDirty = true;
     }
 
     private void Update()
     {
-        if (isDirty)
+        if (!_isDirty) return;
+        
+        if (Application.isPlaying)
         {
-            if (Application.isPlaying)
-            {
-                GameObject.Destroy(tile);
-            }
-            else
-            {
-                DestroyImmediate(tile);
-            }
+            Destroy(tile);
+        }
+        else
+        {
+            DestroyImmediate(tile, true);
+        }
             
-            AddTile();
-            isDirty = false;
+        AddTile();
+        _isDirty = false;
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        foreach (var neighbor in neighbors)
+        {
+            var transformPosition = transform.position;
+            Gizmos.color = Color.blue;
+            Gizmos.DrawSphere(transformPosition, 0.1f);
+            Gizmos.color = Color.white;
+            Gizmos.DrawLine(transformPosition, neighbor.transform.position);
         }
     }
 }

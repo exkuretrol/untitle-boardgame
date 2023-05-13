@@ -7,7 +7,7 @@ public class DebugController : MonoBehaviour
 {
     private bool _showConsole;
     private bool _showHelp;
-    private string input;
+    private string _input;
     public List<object> commandList;
     
     public static DebugCommand Toggle_Moving;
@@ -28,7 +28,7 @@ public class DebugController : MonoBehaviour
         if (_showConsole)
         {
             HandleInput();
-            input = "";
+            _input = "";
         }
     }
 
@@ -96,17 +96,17 @@ public class DebugController : MonoBehaviour
         
         GUI.Box(new Rect(0, y, Screen.width, 30), "");
         GUI.backgroundColor = new Color(0, 0, 0, 0);
-        input = GUI.TextField(new Rect(10f, y + 5f, Screen.width - 20f, 20f), input);
+        _input = GUI.TextField(new Rect(10f, y + 5f, Screen.width - 20f, 20f), _input);
     }
 
     private void HandleInput()
     {
-        string[] properties = input.Split(' ');
+        string[] properties = _input.Split(' ');
         
         for (int i = 0; i < commandList.Count; i++)
         {
             DebugCommandBase commandBase = commandList[i] as DebugCommandBase;
-            if (input.Contains(commandBase.commandId))
+            if (_input.Contains(commandBase.commandId))
             {
                 if (commandList[i] as DebugCommand != null)
                 {

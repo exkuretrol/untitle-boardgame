@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.Profiling;
 using UnityEngine;
+using UnityEngine.Networking;
 
 public class MapChunkSpawner : MonoBehaviour
 {
@@ -17,35 +18,45 @@ public class MapChunkSpawner : MonoBehaviour
         LayoutGrid();
     }
 
-    private void clear()
+    private void Clear()
     {
-        List<GameObject> childrens = new List<GameObject>();
+        List<GameObject> children = new List<GameObject>();
         for (int i = 0; i < transform.childCount; i++)
         {
-            GameObject children = transform.GetChild(i).gameObject;
-            childrens.Add(children);
+            GameObject child = transform.GetChild(i).gameObject;
+            children.Add(child);
         }
 
-        foreach (GameObject children in childrens)
+        foreach (GameObject child in children)
         {
-            DestroyImmediate(children);
+            if (Application.isEditor) DestroyImmediate(child, true);
+            if (Application.isPlaying) Destroy(child);
         }
     }
 
     public void LayoutGrid()
     {
-        clear();
+        Clear();
         int i = 0;
         for (int y = 0; y < mapSize.y; y++)
         {
             for (int x = 0; x < mapSize.x; x++)
             {
-                int randomChunkIndex = Random.Range(0, chunks.Count - 1);
-                GameObject chunk = Instantiate(chunks[randomChunkIndex], transform);
-                // GameObject chunk = Instantiate(chunks[i++], transform);
-                chunk.name = $"Chunk R{x}, C{y}";
+                // int randomChunkIndex = Random.Range(0, chunks.Count - 1);
+                // GameObject chunk = Instantiate(chunks[randomChunkIndex], transform);
+                GameObject chunk = Instantiate(chunks[i++], transform);
+                chunk.name = $"Chunk R{y}, C{x}";
                 chunk.transform.position = Utilities.GetPositionForHexFromCoordinate(chunkSize * x, chunkSize * y);
                 transform.SetParent(chunk.transform);
+
+                Vector2Int chunkCornerCoordinate = new Vector2Int(chunkSize * x, chunkSize * y);
+                foreach (Transform child in chunk.transform)
+                {
+                    HexTile tile = child.gameObject.GetComponent<HexTile>();
+                    tile.offsetCoordinate += new Vector2Int(chunkCornerCoordinate.x, chunkCornerCoordinate.y);
+                    tile.cubeCoordinate = Utilities.OffsetToCube(tile.offsetCoordinate);
+                    tile.gameObject.name = $"Hex R{tile.offsetCoordinate.y}, C{tile.offsetCoordinate.x}";
+                }
             }
         }
     }

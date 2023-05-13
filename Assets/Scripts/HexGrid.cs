@@ -11,45 +11,47 @@ public class HexGrid : MonoBehaviour
     public bool isFlatTopped = false;
     public HexTileGenerationSettings settings;
 
-    public void clear()
+    private void Clear()
     {
-        List<GameObject> children = new List<GameObject>();
-        for (int i = 0; i < transform.childCount; i++)
+        var children = new List<GameObject>();
+        for (var i = 0; i < transform.childCount; i++)
         {
-            GameObject child = transform.GetChild(i).gameObject;
+            var child = transform.GetChild(i).gameObject;
             children.Add(child);
         }
 
         foreach (GameObject child in children)
         {
-            DestroyImmediate(child, true);
+            if (Application.isEditor) DestroyImmediate(child, true);
+            if (Application.isPlaying) Destroy(child);
+            
         }
     }
 
-    private void OnValidate()
-    {
-        if (Application.isPlaying)
-        {
-            LayoutGrid();
-        }
-    }
+    // private void OnValidate()
+    // {
+    //     if (Application.isPlaying)
+    //     {
+    //         LayoutGrid();
+    //     }
+    // }
 
     private void LayoutGrid()
     {
-        clear();
-        for (int y = 0; y < gridSize.y; y++)
+        Clear();
+        for (var y = 0; y < gridSize.y; y++)
         {
-            for (int x = 0; x < gridSize.x; x++)
+            for (var x = 0; x < gridSize.x; x++)
             {
-                GameObject tile = new GameObject($"Hex R{y}, C{x}");
-                HexTile hextile = tile.AddComponent<HexTile>();
-                hextile.settings = settings;
-                hextile.RollTileType();
-                hextile.AddTile();
+                var tile = new GameObject($"Hex R{y}, C{x}");
+                var hexTile = tile.AddComponent<HexTile>();
+                hexTile.settings = settings;
+                hexTile.RollTileType();
+                hexTile.AddTile();
                 tile.transform.position = Utilities.GetPositionForHexFromCoordinate(x, y, isFlatTopped, radius);
 
-                hextile.offsetCoordinate = new Vector2Int(x, y);
-                hextile.cubeCoordinate = Utilities.OffsetToCube(hextile.offsetCoordinate);
+                hexTile.offsetCoordinate = new Vector2Int(x, y);
+                hexTile.cubeCoordinate = Utilities.OffsetToCube(hexTile.offsetCoordinate);
                 tile.transform.SetParent(transform);
             }
         }
